@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Run outputs — written by the train/predict scripts, not source
+results/
+runs/
+*_predictions*.json
+*_htr_predictions_*.json
+
+# Training artefacts
+checkpoint-*/
+*.safetensors
+runs/**/events.out.tfevents.*

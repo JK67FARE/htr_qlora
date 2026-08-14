@@ -1,0 +1,24 @@
+# Python >= 3.10  (the scripts use `str | None` in signatures)
+# torch must be a CUDA build: every train/predict script exits without a GPU.
+
+# --- core: needed by evaluate_htr.py and split_data.py (CPU-only, no GPU) ---
+numpy
+editdistance
+scikit-learn
+
+# --- model stack: the train/predict scripts ---
+torch
+transformers
+accelerate
+peft
+trl
+datasets
+Pillow
+tqdm
+
+# HF Trainer's default report_to="tensorboard" fails at startup without this.
+tensorboard
+
+# --- optional ---
+bitsandbytes    # only for 4-bit: --quant nf4 / --4-bit / --use-qlora
+qwen-vl-utils   # only for train_qwen_lora.py

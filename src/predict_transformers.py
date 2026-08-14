@@ -21,11 +21,11 @@ what you want when sweeping seeds against an existing ZS baseline.
 
 Usage:
     python src/predict_transformers.py --image-dir metadata_crops_2000_tvt/test \\
-        --model google/gemma-3-4b-it
+        --model Qwen/Qwen3.5-4B
     python src/predict_transformers.py --image-dir metadata_crops_2000_tvt/test \\
-        --model google/gemma-3-4b-it --quant nf4
+        --model Qwen/Qwen3.5-4B--quant nf4
     python src/predict_transformers.py --image-dir metadata_crops_2000_tvt/test \\
-        --model google/gemma-3-4b-it --fs-only --seed 7
+        --model Qwen/Qwen3.5-4B --fs-only --seed 7
 
 Requires:
     pip install transformers torch accelerate Pillow tqdm
